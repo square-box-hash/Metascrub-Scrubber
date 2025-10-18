@@ -5,11 +5,11 @@
       "src": "frontend/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "frontend/dist"
+        "distDir": "frontend/dist" 
       }
     },
     {
-      "src": "backend/server.js", 
+      "src": "backend/server.js",
       "use": "@vercel/node"
     }
   ],
