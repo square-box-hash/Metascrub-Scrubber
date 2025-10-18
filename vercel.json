@@ -5,18 +5,16 @@
       "src": "frontend/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "frontend/dist" 
+        "distDir": "frontend/dist"
       }
     },
     {
-      // ******* This part must be correct *******
       "src": "backend/server.js", 
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      // ******* This part must be correct *******
       "src": "/api/(.*)",
       "dest": "backend/server.js"
     },
