@@ -2,28 +2,25 @@
   "version": 2,
   "builds": [
     {
-      // 1. Configure the Frontend Build (Uses the 'frontend' folder). so you can do Vite builds there.
       "src": "frontend/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "frontend/dist" // Standard output for a Vite build in the 'frontend' folder
+        "distDir": "frontend/dist" 
       }
     },
     {
-      // 2. Configure the Backend (Node.js Serverless Function)
-      "src": "backend/server.js", // Targets your specific backend file
+      // ******* This part must be correct *******
+      "src": "backend/server.js", 
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      // 3. Route all API calls to the serverless function
-      // This routes requests like your frontend's fetch('/api/...') to the server.js file
+      // ******* This part must be correct *******
       "src": "/api/(.*)",
       "dest": "backend/server.js"
     },
     {
-      // 4. Route all other requests to the static frontend files
       "src": "/(.*)",
       "dest": "frontend/dist/$1"
     }
