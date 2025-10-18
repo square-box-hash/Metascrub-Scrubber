@@ -11,13 +11,16 @@
     }
   ],
   "routes": [
+    // 1. Route for API calls: sends them to the serverless function
     {
       "src": "/api/(.*)",
       "dest": "backend/server.js"
     },
+    // 2. SPA FALLBACK: All other traffic serves the single index.html file
+    // NOTE: The '/' at the start of the 'dest' path is CRITICAL for monorepos.
     {
       "src": "/(.*)",
-      "dest": "frontend/dist/index.html"
+      "dest": "/frontend/dist/index.html" 
     }
   ]
 }
