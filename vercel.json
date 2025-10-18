@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      // 1. Configure the Frontend Build (Uses the 'frontend' folder)
+      // 1. Configure the Frontend Build (Uses the 'frontend' folder). so you can do Vite builds there.
       "src": "frontend/package.json",
       "use": "@vercel/static-build",
       "config": {
