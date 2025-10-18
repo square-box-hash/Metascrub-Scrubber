@@ -11,12 +11,10 @@
     }
   ],
   "routes": [
-    // 1. Route for API calls: sends them to the serverless function
     {
       "src": "/api/(.*)",
       "dest": "backend/server.js"
     },
-    // 2. SPA FALLBACK: All other traffic serves the single index.html file
     {
       "src": "/(.*)",
       "dest": "frontend/dist/index.html"
