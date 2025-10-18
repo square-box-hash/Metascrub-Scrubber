@@ -19,7 +19,7 @@ Many files you create contain hidden data, known as metadata. A photo taken on y
 
 **MetaScrub** provides a simple interface to upload your file, have it processed on our server, and download a clean, metadata-free version.
 
-## 🚀 Key Features
+![[A good screenshot or GIF of your app in action]](httpsNext-Week.png) ## 🚀 Key Features
 
 * **Powerful Server-Side Scrubbing:** Uses the high-performance [Sharp](https://sharp.pixelploom.com/) library to efficiently remove metadata.
 * **Simple React UI:** A clean, modern interface built with React and Vite for easy file uploads.
