@@ -7,9 +7,32 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   const handleFileChange = (e) => {
-    setSelectedFile(e.target.files[0]);
-    setScrubbedUrl('');
-  };
+  const file = e.target.files[0];
+  setSelectedFile(file);
+  setScrubbedUrl('');
+};
+
+// ... inside your return/render ...
+<input 
+  type="file" 
+  onChange={handleFileChange} 
+  /* This allows images, videos, and PDFs */
+  accept="image/*,video/*,application/pdf" 
+  className="hidden" 
+  id="file-upload"
+/>
+
+{/* Simple Dynamic Icon Logic */}
+{selectedFile && (
+  <div className="mt-4 p-4 border rounded-lg bg-white/10 flex items-center gap-3">
+    <div className="text-3xl">
+      {selectedFile.type.includes('image') ? '🖼️' : 
+       selectedFile.type.includes('video') ? '🎥' : 
+       selectedFile.type.includes('pdf') ? '📄' : '📁'}
+    </div>
+    <div className="text-sm truncate">{selectedFile.name}</div>
+  </div>
+)}
 
   const handleSubmit = async (e) => {
     e.preventDefault();
