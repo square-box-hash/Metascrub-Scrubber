@@ -9,7 +9,7 @@ A full-stack web application to scrub sensitive metadata (like GPS location) fro
 
 **This project provides a simple service to remove sensitive metadata from your files. It uses a React/Vite frontend and a Node.js/Express backend for processing.**
 
-### ✨ [Live Demo Link (coming soon!)] ✨
+### ✨ [Live Demo Link https://metascrub-scrubber-oqe1.vercel.app/] ✨
 
 ---
 
